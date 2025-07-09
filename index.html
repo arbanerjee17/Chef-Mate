@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chef-Mate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+     <div class="nav-left">
+        <img src="LOGO.png" alt="Chef-Mate Logo" class="logo" />
+        <h1>Chef-Mate</h1>
+    </div>
+    <div class="nav-right">
+     <span class="copyright">Copyright© INC Aparup Banerjee</span>
+     <button id="dark-toggle">🌙 Dark Mode</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Add Recipe Form -->
+    <div class="left-column">
+      <h3>Add Recipe</h3>
+      <form id="recipe-form">
+        <label for="recipe-name">Name:</label>
+        <input type="text" id="recipe-name" required />
+
+        <label for="recipe-ingredients">Ingredients (comma-separated):</label>
+        <textarea id="recipe-ingredients" rows="5" required></textarea>
+
+        <label for="recipe-method">Method:</label>
+        <textarea id="recipe-method" rows="5" required></textarea>
+
+        <button type="submit">Add Recipe</button>
+      </form>
+    </div>
+
+    <!-- Recipe Display Area -->
+    <div class="right-column">
+      <div id="search-section">
+        <h3>Recipes List</h3>
+        <label for="search-box">Search:</label>
+        <input type="text" id="search-box" placeholder="e.g. Chicken, Pasta, etc." />
+      </div>
+      <div id="recipe-list"></div>
+      <div id="no-recipes">No recipes to display.</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
